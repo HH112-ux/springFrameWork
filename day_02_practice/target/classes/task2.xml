@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="stu1" class="com.jh.task2.Student">
+        <property name="name" value="张三"></property>
+        <property name="cardColor" value="红色"></property>
+        <property name="cardType" value="A类"></property>
+    </bean>
+    <bean id="stu2" class="com.jh.task2.Student">
+        <property name="name" value="李四"></property>
+        <property name="cardColor" value="蓝色"></property>
+        <property name="cardType" value="A类"></property>
+    </bean>
+    <bean id="stu3" class="com.jh.task2.Student">
+        <property name="name" value="王五"></property>
+        <property name="cardColor" value="红色"></property>
+        <property name="cardType" value="B类"></property>
+    </bean>
+    <bean id="stu4" class="com.jh.task2.Student">
+        <property name="name" value="赵六"></property>
+        <property name="cardColor" value="蓝色"></property>
+        <property name="cardType" value="B类"></property>
+    </bean>
+
+    <bean id="libraryManager" class="com.jh.task2.LibraryManager">
+        <property name="students">
+            <list>
+                <ref bean="stu1"/>
+                <ref bean="stu2"/>
+                <ref bean="stu3"/>
+                <ref bean="stu4"/>
+            </list>
+        </property>
+    </bean>
+</beans>

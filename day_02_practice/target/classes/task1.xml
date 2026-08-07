@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="s1" class="com.jh.task1.Student">
+        <property name="name" value="张三"></property>
+        <property name="gender" value="男"></property>
+    </bean>
+    <bean id="s2" class="com.jh.task1.Student">
+        <property name="name" value="李四"></property>
+        <property name="gender" value="男"></property>
+    </bean>
+    <bean id="s3" class="com.jh.task1.Student">
+        <property name="name" value="王五"></property>
+        <property name="gender" value="女"></property>
+    </bean>
+    <bean id="s4" class="com.jh.task1.Student">
+        <property name="name" value="赵六"></property>
+        <property name="gender" value="男"></property>
+    </bean>
+
+    <bean id="bathManager" class="com.jh.task1.BathManager">
+        <property name="students">
+            <list>
+                <ref bean="s1"/>
+                <ref bean="s2"/>
+                <ref bean="s3"/>
+                <ref bean="s4"/>
+            </list>
+        </property>
+    </bean>
+</beans>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="teacherService" class="com.jh.injection.TeacherService">
+        <property name="name" value="张老师"></property>
+        <property name="age" value="35"></property>
+    </bean>
+    <bean id="teacherService1" class="com.jh.injection.TeacherService">
+        <property name="name"><null></null></property>
+        <property name="age" value="30"></property>
+        <property name="addrs">
+            <list>
+                <value>南京</value>
+                <value>北京</value>
+                <value>天津</value>
+                <value>上海</value>
+            </list>
+        </property>
+        <property name="set">
+            <set>
+                <value>AAA</value>
+                <value>BBB</value>
+                <value>CCC</value>
+            </set>
+        </property>
+        <property name="teachers">
+            <set>
+                <ref bean="a"></ref>
+                <ref bean="b"></ref>
+                <ref bean="c"></ref>
+            </set>
+        </property>
+        <property name="list">
+            <list>
+                <value>TTT</value>
+                <value>VVV</value>
+                <value>CCC</value>
+            </list>
+        </property>
+        <property name="map">
+            <map>
+                <entry key="语文" value="80.5"></entry>
+                <entry key="数学" value="84.5"></entry>
+                <entry key="英语" value="86.5"></entry>
+            </map>
+        </property>
+        <property name="properties">
+            <props>
+                <prop key="aaa">yyyy</prop>
+            </props>
+        </property>
+        <property name="dao" ref="dao"></property>
+    </bean>
+    <bean id="a" class="com.jh.injection.Teacher">
+        <property name="name" value="张老师"></property>
+        <property name="age" value="26"></property>
+    </bean>
+    <bean id="b" class="com.jh.injection.Teacher">
+        <property name="name" value="李老师"></property>
+        <property name="age" value="29"></property>
+    </bean>
+    <bean id="c" class="com.jh.injection.Teacher">
+        <property name="name" value="王老师"></property>
+        <property name="age" value="27"></property>
+    </bean>
+    <bean id="dao" class="com.jh.injection.TeacherDaoImpl"></bean>
+</beans>

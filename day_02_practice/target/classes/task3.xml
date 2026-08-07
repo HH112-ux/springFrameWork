@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="student" class="com.jh.task3.Student">
+        <property name="name" value="张三"></property>
+        <property name="scores">
+            <map>
+                <entry key="语文" value="80"></entry>
+                <entry key="英语" value="60"></entry>
+                <entry key="数学" value="55"></entry>
+                <entry key="地理" value="50"></entry>
+            </map>
+        </property>
+    </bean>
+
+    <bean id="scoreManager" class="com.jh.task3.ScoreManager">
+        <property name="student" ref="student"></property>
+    </bean>
+</beans>
