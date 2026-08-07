@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans>
+    <bean id="userDao" class="com.jh.user.UserDaoMybatisImpl"></bean>
+    <!--<bean id="userDao1" class="com.jh.user.UserDaoJdbcImpl"></bean>-->
+    <bean id="boy" class="com.jh.user.Boy">
+        <property name="name" value="张三"></property>
+        <property name="gender" value="男"></property>
+    </bean>
+</beans>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="userDao" class="com.jh.user.UserDaoJdbcImpl"></bean>
+    <bean id="userDao1" class="com.jh.user.UserDaoMybatisImpl"></bean>
+    <bean id="girl" class="com.jh.user.Girl">
+        <property name="name" value="李某"></property>
+        <property name="height" value="170"></property>
+        <property name="weight" value="100"></property>
+    </bean>
+    <bean id="girl1" class="com.jh.user.Girl">
+        <property name="name" value="张某"></property>
+        <property name="height" value="160"></property>
+        <property name="weight" value="110"></property>
+    </bean>
+    <bean id="boy" class="com.jh.user.Boy">
+        <property name="name" value="李四"></property>
+        <property name="age" value="20"></property>
+        <property name="girl" ref="girl1"></property>
+    </bean>
+</beans>
