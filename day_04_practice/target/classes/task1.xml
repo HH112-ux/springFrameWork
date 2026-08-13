@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--自定义类型转换器对象-->
+    <bean id="doubleConverter" class="com.jh.task1.DoubleToBigDecimalConverter"/>
+
+    <!--注册类型转换器-->
+    <bean id="conversionService" class="org.springframework.context.support.ConversionServiceFactoryBean">
+        <property name="converters">
+            <set>
+                <ref bean="doubleConverter"/>
+            </set>
+        </property>
+    </bean>
+
+    <!--员工bean，salary配置为Double值(8888.88)，由转换器自动转为BigDecimal-->
+    <bean id="employee" class="com.jh.task1.Employee">
+        <property name="name" value="张三"/>
+        <property name="salary" value="8888.88"/>
+    </bean>
+</beans>

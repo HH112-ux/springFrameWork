@@ -1,0 +1,12 @@
+com/jh/factoryBean/Factory.class
+com/jh/factoryBean/StaticFactory.class
+com/jh/factoryBean/MyConnectionBean1.class
+com/jh/factoryBean/XMLOperator.class
+com/jh/factoryBean/MyFactoryBean.class
+com/jh/factoryBean/InstanceFactory.class
+com/jh/factoryBean/MyConnectionFactoryBean.class
+com/jh/factoryBean/TestMyFactory.class
+com/jh/factoryBean/Bean.class
+com/jh/factoryBean/Test.class
+com/jh/factoryBean/MyConnectionBean.class
+com/jh/factoryBean/FactoryTest.class

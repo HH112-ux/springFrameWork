@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="person" class="com.jh.model.Person" p:name="张三" p:age="20" p:birthday="1999/12/12"></bean>
+    <!--自定义类型转换器对象-->
+    <bean id="converter" class="com.jh.model.DateConverter" p:pattern="yyyy/MM/dd"></bean>
+    <!--对类型转换器进行注册-->
+    <bean id="conversionService" class="org.springframework.context.support.ConversionServiceFactoryBean">
+        <property name="converters">
+            <set>
+                <ref bean="converter"></ref>
+            </set>
+        </property>
+    </bean>
+    <bean id="stu" class="com.jh.model.Student" p:name="李四" p:birth="1997/02/01"></bean>
+</beans>
