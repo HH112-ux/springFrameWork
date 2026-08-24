@@ -1,0 +1,5 @@
+com/jh/test/Test.class
+com/jh/entity/Student.class
+com/jh/service/StudentService.class
+com/jh/service/StudentServiceImpl.class
+com/jh/mapper/StudentMapper.class
