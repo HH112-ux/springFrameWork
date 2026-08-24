@@ -1,0 +1,12 @@
+com/jh/test/TestXml.class
+com/jh/entity/Acc.class
+com/jh/mapper/RecordsMapper.class
+com/jh/service/AccServiceImpl.class
+com/jh/test/TestBasic.class
+com/jh/test/TestAnnotation.class
+com/jh/service/CouponServiceImplXml.class
+com/jh/service/CouponService.class
+com/jh/entity/Records.class
+com/jh/service/CouponServiceImpl.class
+com/jh/mapper/AccMapper.class
+com/jh/service/AccService.class

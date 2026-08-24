@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jh.mapper.RecordsMapper">
+    <insert id="insert" parameterType="Records">
+        INSERT INTO records (account, updateTime, category, num)
+        VALUES (#{account}, #{updateTime}, #{category}, #{num})
+    </insert>
+
+    <select id="selectList" resultType="Records">
+        SELECT id, account, updateTime, category, num FROM records
+    </select>
+</mapper>
