@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--对数据库环境配置的部分，整合在spring容器中来完成-->
+    <!--<environments default="">
+        <environment id="">
+            <transactionManager type=""></transactionManager>
+            <dataSource type=""></dataSource>
+        </environment>
+    </environments>-->
+    <typeAliases>
+        <package name="com.jh.entity"/>
+    </typeAliases>
+    <mappers>
+        <package name="com.jh.mapper"/>
+    </mappers>
+</configuration>
