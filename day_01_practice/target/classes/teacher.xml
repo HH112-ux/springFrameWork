@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<beans>
-    <bean id="teacher" class="com.jh.reflection.Teacher">
-        <property name="name" value="王老师"/>
-        <property name="addr" value="沈阳浑南区"/>
-    </bean>
-</beans>
